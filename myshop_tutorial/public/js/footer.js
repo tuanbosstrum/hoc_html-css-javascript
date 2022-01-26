@@ -30,9 +30,6 @@ const createFooter = () => {
             <li>
                 <a href="#" class="footer-link">watchs</a>
             </li>
-            <li>
-                <a href="#" class="footer-link">t-shirts</a>
-            </li>
         </ul>
         <ul class="category">
             <li class="category-title">women</li>
@@ -59,9 +56,6 @@ const createFooter = () => {
             </li>
             <li>
                 <a href="#" class="footer-link">watchs</a>
-            </li>
-            <li>
-                <a href="#" class="footer-link">t-shirts</a>
             </li>
         </ul>
     </div>
