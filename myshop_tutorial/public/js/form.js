@@ -24,7 +24,7 @@ submitBtn.addEventListener('click', () => {
     } else {
         //chạy
         loader.style.display = 'block';
-        senData('/signup', {
+        sendData('/signup', {
             name: name.value,
             email: email.value,
             password: password.value,
@@ -37,7 +37,7 @@ submitBtn.addEventListener('click', () => {
 })
 
 //tạo kiểu chức năng
-const senData = (path, data) => {
+const sendData = (path, data) => {
     fetch(path, {
             method: 'post',
             headers: new Headers({ 'Content-Type': 'application/json' }),
@@ -54,7 +54,10 @@ const processData = (data) => {
     if (data.alert) {
         showAlert(data.alert);
     } else if (data.name) {
-        console.log(data);
+        //làm tokens
+        data.authToken = generateToken(data.email);
+        sessionStorage.user = JSON.stringify(data);
+        location.replace('/');
     }
 }
 
