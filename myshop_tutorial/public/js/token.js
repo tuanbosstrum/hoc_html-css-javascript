@@ -24,39 +24,39 @@ const compareToken = (token, key) => {
     return false;
 }
 
-//chức năng phổ biến cho người bán
-//tạo kiểu chức năng
-const sendData = (path, data) => {
-    fetch(path, {
-            method: 'post',
-            headers: new Headers({ 'Content-Type': 'application/json' }),
-            body: JSON.stringify(data)
-        }).then((res) => res.json())
-        .then(response => {
-            processData(response);
-        })
-}
+// //chức năng phổ biến cho người bán
+// //tạo kiểu chức năng
+// const sendData = (path, data) => {
+//     fetch(path, {
+//             method: 'post',
+//             headers: new Headers({ 'Content-Type': 'application/json' }),
+//             body: JSON.stringify(data)
+//         }).then((res) => res.json())
+//         .then(response => {
+//             processData(response);
+//         })
+// }
 
-//kiểm tra dữ liệu đã có hay chưa
-const processData = (data) => {
-    loader.style.display = null;
-    if (data.alert) {
-        showAlert(data.alert);
-    } else if (data.name) {
-        //làm tokens
-        data.authToken = generateToken(data.email);
-        sessionStorage.user = JSON.stringify(data);
-        location.replace('/');
-    }
-}
+// //kiểm tra dữ liệu đã có hay chưa
+// const processData = (data) => {
+//     loader.style.display = null;
+//     if (data.alert) {
+//         showAlert(data.alert);
+//     } else if (data.name) {
+//         //làm tokens
+//         data.authToken = generateToken(data.email);
+//         sessionStorage.user = JSON.stringify(data);
+//         location.replace('/');
+//     }
+// }
 
-// lệnh cảnh báo
-const showAlert = (msg) => {
-    let alertBox = document.querySelector('.alert-box');
-    let alertMsg = document.querySelector('.alert-msg');
-    alertMsg.innerHTML = msg;
-    alertBox.classList.add('show');
-    setTimeout(() => {
-        alertBox.classList.remove('show');
-    }, 3000);
-}
+// // lệnh cảnh báo
+// const showAlert = (msg) => {
+//     let alertBox = document.querySelector('.alert-box');
+//     let alertMsg = document.querySelector('.alert-msg');
+//     alertMsg.innerHTML = msg;
+//     alertBox.classList.add('show');
+//     setTimeout(() => {
+//         alertBox.classList.remove('show');
+//     }, 3000);
+// }
