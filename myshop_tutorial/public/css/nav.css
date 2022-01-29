@@ -74,10 +74,12 @@
     
     .nav-items a {
         margin-left: 20px;
+        position:relative;
     }
     
     .nav-items a img {
         width: 30px;
+        cursor:pointer;
     }
     /* thanh menu */
     
