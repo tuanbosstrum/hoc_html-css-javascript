@@ -1,4 +1,16 @@
 const loader = document.querySelector('.loader');
+
+//thêm sự kiện khi tải vào cửa sổ
+
+window.onload = () => {
+    if (sessionStorage.user) {
+        user = JSON.parse(sessionStorage.user);
+        if (compareToken(user.authToken, user.email)) {
+            location.replace('/');
+        }
+    }
+}
+
 // select input
 const submitBtn = document.querySelector('.submit-btn');
 const name = document.querySelector('#name');
