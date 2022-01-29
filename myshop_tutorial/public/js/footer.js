@@ -28,7 +28,7 @@ const createFooter = () => {
                 <a href="#" class="footer-link">sports</a>
             </li>
             <li>
-                <a href="#" class="footer-link">watchs</a>
+                <a href="#" class="footer-link">watches</a>
             </li>
         </ul>
         <ul class="category">
@@ -66,7 +66,7 @@ const createFooter = () => {
 <p class="info">telephone - 0946535271</p>
 <div class="footer-social-container">
     <div>
-        <a href="#" class="social-link">terms & sevices</a>
+        <a href="#" class="social-link">terms & services</a>
         <a href="#" class="social-link">privacy page</a>
     </div>
     <div>
