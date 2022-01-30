@@ -29,7 +29,7 @@ const businessName = document.querySelector('#business-name');
 const address = document.querySelector('#business-add');
 const about = document.querySelector('#about');
 const number = document.querySelector('#number');
-const tac = document.querySelector('#terms-and-conditions');
+const tac = document.querySelector('#terms-and-cond');
 const legitInfo = document.querySelector('#legitInfo');
 
 applyFormButton.addEventListener('click', () => {
@@ -46,7 +46,7 @@ applyFormButton.addEventListener('click', () => {
             about: about.value,
             number: number.value,
             tac: tac.checked,
-            legit: legit.checked,
+            legit: legitInfo.checked,
             email: JSON.parse(sessionStorage.user).email
         })
     }
