@@ -104,6 +104,30 @@ app.post('/login', (req, res) => {
         })
 })
 
+//phần người bán
+app.get('/seller', (req, res) => {
+    res.sendFile(path.join(staticPath, "seller.html"));
+})
+
+app.post('seller', (req, res) => {
+    let { name, about, address, number, tac, legit, email } = req.body;
+    if (!name.length || !address.length || !about.length || !number.length < 10 || !Number(number)) {
+        return res.json({ 'alert': 'some infomation(s) is/are invalid' });
+    } else if (!tac || !legit) {
+        return res.json({ 'alert': 'you must agree to our terms and conditions' })
+    } else {
+        //update user seller status
+        db.collection('sellers').doc(email).set(req.body)
+            .then(data => {
+                db.collection('users').doc(email).update({
+                    seller: true
+                }).then(data => {
+                    res.json(true);
+                })
+            })
+    }
+})
+
 //bắt lỗi trang web 404 not found)
 app.get('/404', (req, res) => {
     res.sendFile(path.join(staticPath, "404.html"));
