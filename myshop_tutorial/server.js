@@ -109,7 +109,7 @@ app.get('/seller', (req, res) => {
     res.sendFile(path.join(staticPath, "seller.html"));
 })
 
-app.post('seller', (req, res) => {
+app.post('/seller', (req, res) => {
     let { name, about, address, number, tac, legit, email } = req.body;
     if (!name.length || !address.length || !about.length || number.length < 10 || !Number(number)) {
         return res.json({ 'alert': 'some infomation(s) is/are invalid' });

@@ -39,7 +39,6 @@ const sendData = (path, data) => {
 
 //kiểm tra dữ liệu đã có hay chưa
 const processData = (data) => {
-    console.log(data);
     loader.style.display = null;
     if (data.alert) {
         showAlert(data.alert);
