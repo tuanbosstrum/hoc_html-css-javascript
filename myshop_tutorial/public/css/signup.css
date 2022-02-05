@@ -74,6 +74,7 @@ trình đổi màu chữ trong trường signup */
     border-radius: 2px;
     text-transform: capitalize;
     border: none;
+    /* con trỏ tay */
     cursor: pointer;
     display: block;
     margin: 30px 0;

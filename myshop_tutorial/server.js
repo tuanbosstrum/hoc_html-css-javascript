@@ -13,7 +13,7 @@ admin.initializeApp({
 let db = admin.firestore();
 
 //thư mục công cộng
-let staticPath = path.join(__dirname, 'public');
+let staticPath = path.join(__dirname, "public");
 
 //đường dẫn máy chứa express
 const app = express();
