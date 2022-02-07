@@ -104,6 +104,11 @@ app.post('/login', (req, res) => {
         })
 })
 
+//sản phẩm 
+app.get('/add-product', (req, res) => {
+    res.sendFile(path.join(staticPath, "addProduct.html"));
+})
+
 //phần người bán
 app.get('/seller', (req, res) => {
     res.sendFile(path.join(staticPath, "seller.html"));
