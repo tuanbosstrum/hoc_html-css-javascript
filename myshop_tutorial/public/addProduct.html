@@ -19,14 +19,38 @@
         <img src="img/error.png" class="alert-img" alt="">
         <p class="alert-msg"></p>
     </div>
+    <img src=" img/dark-logo.png " class="logo " alt="">
 
     <div class="form">
-        <input type="text" id="product-name" maxLength="50" placeholder="product name">
-    </div>
-    <img src="img/dark-logo.png" class="logo" alt="">
+        <input type="text" id="product-name" placeholder="product name">
+        <input type="text" id="short-des" placeholder="short linde about the product">
+        <textarea id="des" placeholder="detail description"></textarea>
 
-    <script src="js/token.js"></script>
-    <script src="js/addProduct.js"></script>
+        <!-- ảnh sẩn phẩm -->
+        <div class="product-info">
+            <div class="product-image">
+                <p class="text">product image</p>
+            </div>
+            <div class="upload-image-sec">
+                <!-- load văn bản -->
+                <p class="text"><img src="img/camera.png" alt="">upload image</p>
+                <div class="upload-catalouge">
+                    <input type="file" class="fileupload" id="first-file-upload-btn" hidden>
+                    <label for="first-file-upload-btn" class="upload-image"></label>
+                    <input type="file" class="fileupload" id="second-file-upload-btn" hidden>
+                    <label for="second-file-upload-btn" class="upload-image"></label>
+                    <input type="file" class="fileupload" id="third-file-upload-btn" hidden>
+                    <label for="third-file-upload-btn" class="upload-image"></label>
+                    <input type="file" class="fileupload" id="four-file-upload-btn" hidden>
+                    <label for="four-file-upload-btn" class="upload-image"></label>
+                </div>
+            </div>
+            <div class="select-sizes"></div>
+        </div>
+    </div>
+
+    <script src="js/token.js "></script>
+    <script src="js/addProduct.js "></script>
 </body>
 
 </html>
