@@ -156,3 +156,45 @@ textarea {
     background: #383838;
     color: #fff;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.product-price {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+
+/* loại bỏ lề các đầu vào bên vùng chưa định giá*/
+
+.product-price input {
+    margin: 0;
+}
+
+.buttons {
+    margin: 20px 0 50px;
+}
+
+.btn {
+    padding: 10px 30px;
+    text-transform: capitalize;
+    color: #fff;
+    background: #383838;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+/* lưu */
+
+#save-btn {
+    background: #a9a9a9;
+}

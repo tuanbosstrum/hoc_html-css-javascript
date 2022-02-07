@@ -58,6 +58,25 @@
                 </div>
             </div>
         </div>
+
+        <!-- giá sản phẩm -->
+        <div class="product-price">
+            <input type="number" id="actual-price" placeholder="actual price">
+            <input type="number" id="discount" placeholder="discount percentage">
+            <input type="number" id="sell-price" placeholder="selling price">
+        </div>
+
+        <input type="number" id="stock" min="20" placeholder="item in stocks(minimum 20)">
+        <textarea id="tags" placeholder="Enter categories here, for example - Men, Jeans, Blue Jeans(you should add men or women or start)">
+        </textarea>
+
+        <input type="checkbox" class="checkbox" id="tac" checked>
+        <label for="tac">clothing take 30% from your total sell</label>
+
+        <div class="buttons">
+            <button class="btn" id="add-btn">add product</button>
+            <button class="btn" id="save-btn">save draft</button>
+        </div>
     </div>
 
     <script src="js/token.js "></script>
