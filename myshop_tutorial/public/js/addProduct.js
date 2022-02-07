@@ -12,3 +12,28 @@ window.onload = () => {
         location.replace('/login');
     }
 }
+
+// định giá sản phẩm
+const actualPrice = document.querySelector('#actual-price');
+const discountPercentage = document.querySelector('#discount');
+const sellingPrice = document.querySelector('#sell-price');
+
+// giá trị sản phẩm
+discountPercentage.addEventListener('input', () => {
+    if (discountPercentage.value > 100) {
+        discountPercentage.value = 90;
+    } else {
+        let discount = actualPrice.value * discountPercentage.value / 100;
+        sellingPrice.value = actualPrice.value - discount;
+    }
+})
+
+// sự kiện vào phần tử giá bán
+sellingPrice.addEventListener('input', () => {
+    let discount = (sellingPrice.value / actualPrice.value) * 100;
+    discountPercentage.value = discount;
+})
+
+// tải ảnh sản phẩm
+let uploadImage = document.querySelectorAll('.fileupload');
+let imagePaths = [];
