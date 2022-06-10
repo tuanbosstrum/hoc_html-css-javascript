@@ -1,3 +1,14 @@
+//điều hướng đăng nhập tới trang chủ khi login
+
+// window.onload = () =>{
+//     if (sessionStorage.user) {
+//         user = JSON.parse(sessionStorage.user);
+//         if (compareToken(user.authToken, user.email)) {
+//             location.replace('/');
+//         }
+//     }
+// }
+
 const loader = document.querySelector('.loader');
 
 //thêm sự kiện khi tải vào cửa sổ

@@ -98,7 +98,8 @@ textarea {
 }
 
 .add-product-title {
-    text-transform: #383838;
+    text-transform: capitalize;
+    color: #383838;
 }
 
 .no-product-image {
