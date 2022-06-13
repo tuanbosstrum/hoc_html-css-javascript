@@ -39,7 +39,7 @@ const legitInfo = document.querySelector('#legitInfo');
 
 applyFormButton.addEventListener('click', () => {
     if (!businessName.value.length || !address.value.length || !about.value.length || !number.value.length) {
-        showAlert('fill all thẻ inputs');
+        showAlert('fill all the inputs');
     } else if (!tac.checked || !legitInfo.checked) {
         showAlert('You must agree to our terms conditions');
     } else {
