@@ -9,9 +9,9 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "aws-sdk": "^2.1069.0",
+        "aws-sdk": "^2.1154.0",
         "bcrypt": "^5.0.1",
-        "dotenv": "^16.0.0",
+        "dotenv": "^16.0.1",
         "express.js": "^1.0.0",
         "firebase-admin": "^10.0.2",
         "nodemon": "^2.0.15"
